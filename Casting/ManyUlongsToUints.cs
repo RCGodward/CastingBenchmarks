@@ -69,6 +69,21 @@ namespace Casting
         }
 
         [Benchmark]
+        public uint[] SpanCast()
+        {
+            uint[] result = new uint[N];
+
+            var src = MemoryMarshal.Cast<ulong, uint>(data);
+
+            for(int i = 0; i < N; ++i)
+            {
+                result[i] = src[i * 2];
+            }
+
+            return result;
+        }
+
+        [Benchmark]
         public uint[] Net70VectorCast()
         {
 #if NET7_0_OR_GREATER

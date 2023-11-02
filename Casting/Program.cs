@@ -14,8 +14,8 @@ namespace Casting
             BenchmarkRunner.Run(new Type[]
             {
                 //typeof(UlongToUint),
-                //typeof(ManyUlongsToUints),
-                typeof(UlongToDouble)
+                typeof(ManyUlongsToUints),
+                //typeof(UlongToDouble)
             });
         }
     }

@@ -49,5 +49,13 @@
 
             Assert.Equal(Expected, actual);
         }
+
+        [Fact]
+        public void SpanCast()
+        {
+            var actual = Test.SpanCast();
+
+            Assert.Equal(Expected, actual);
+        }
     }
 }
